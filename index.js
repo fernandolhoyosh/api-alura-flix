@@ -56,7 +56,7 @@ app.get('/videos/:id', (req, res) => {
   if (video) {
     res.status(200).json(video);
   } else {
-    res.status(404).json({ message: 'Video no encontrado' });
+    res.status(404).json({ data: null, message: 'Video no encontrado' });
   }
 });
 
