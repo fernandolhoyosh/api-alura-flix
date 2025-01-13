@@ -47,6 +47,20 @@ app.get('/videos', (req, res) => {
     res.status(200).json(db.videos);
 });
 
+// Ruta GET para obtener un video por su ID
+app.get('/videos/:id', (req, res) => {
+  const { id } = req.params;
+  const db = readDB();
+  const video = db.videos.find(video => video.id === id);
+
+  if (video) {
+    res.status(200).json(video);
+  } else {
+    res.status(404).json({ message: 'Video no encontrado' });
+  }
+});
+
+
 // Ruta DELETE para eliminar un video
 app.delete('/videos/:id', (req, res) => {
   const { id } = req.params;
