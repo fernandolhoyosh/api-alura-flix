@@ -24,12 +24,6 @@ const writeDB = (data) => {
   fs.writeFileSync(dbPath, JSON.stringify(data, null, 2));
 };
 
-// Middleware para manejar rutas no encontradas
-app.use((req, res, next) => {
-  res.status(404).json({ message: 'Ruta no encontrada' });
-});
-
-
 //Ruta principal
 
 app.get('/', (req, res) => {
@@ -94,6 +88,11 @@ app.put('/videos/:id', (req, res) => {
   } else {
     res.status(404).json({ message: 'Video no encontrado' });
   }
+});
+
+// Middleware para manejar rutas no encontradas
+app.use((req, res, next) => {
+  res.status(404).json({ message: 'Ruta no encontrada' });
 });
 
 app.listen(PORT, () => {
