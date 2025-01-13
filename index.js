@@ -35,7 +35,7 @@ app.post('/videos', (req, res) => {
   const { title, category, image, video, description } = req.body;
   const newVideo = { id: uuidv4(), title, category, image, video, description };
   const db = readDB();
-  db.productos.push(newVideo);
+  db.videos.push(newVideo);
   writeDB(db);
   res.status(201).json(newVideo);
 });
