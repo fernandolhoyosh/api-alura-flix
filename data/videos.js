@@ -6,7 +6,7 @@
       image: "https://i.ytimg.com/vi/PztCEdIJITY/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCd5jxSprvo-KAWg2kDt9y5Kv7OqA",
       video: "https://www.youtube.com/embed/PztCEdIJITY",
       description: "¿A veces cuando estás programando sientes dificuldades en saber en qué momento utilizar let, var o const para declarar una variable? En este video te sacamos estas dudas, además de explicarte lo que es escopo global y local en JavaScript.",
-      id: 1
+      id: "1"
     },
     {
       title: "¿Qué es JavaScript?",
