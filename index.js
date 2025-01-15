@@ -90,11 +90,11 @@ app.put('/videos/:id', (req, res) => {
   }
 });
 
-// Middleware para manejar rutas no encontradas
+/* // Middleware para manejar rutas no encontradas
 app.use((req, res, next) => {
   res.status(404).sendFile(path.join(__dirname, 'build','index.html'));
 });
-
+ */
 
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
