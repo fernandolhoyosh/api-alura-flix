@@ -95,6 +95,7 @@ app.use((req, res, next) => {
   res.status(404).sendFile(path.join(__dirname, 'build','index.html'));
 });
 
+
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
