@@ -92,7 +92,7 @@ app.put('/videos/:id', (req, res) => {
 
 // Middleware para manejar rutas no encontradas
 app.use((req, res, next) => {
-  res.status(404).json({ message: 'Ruta no encontrada' });
+  res.status(404).sendFile(path.join(__dirname, 'path-to-frontend-build','index.html'));
 });
 
 app.listen(PORT, () => {
